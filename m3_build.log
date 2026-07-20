@@ -1,0 +1,50 @@
+Perfect! Let me give you a final summary:
+
+## MILESTONE 3 COMPLETE ✓
+
+I've successfully built and verified all 4 items from MILESTONE3.md. The CREOS simulation now has a believable multi-agent communications layer.
+
+### What Was Built:
+
+**1. Agent Personas (src/lib/comms/personas.ts)**
+- 7 distinct specialists: Acquisitions Analyst, Underwriter, Debt Broker, Due Diligence Lead, Asset Manager, Tax Advisor, Orchestrator
+- Each with name, role, bio, avatar color, initials
+- ApprovalCard now shows persona info instead of generic "AI Assistant"
+- 11 tests passing
+
+**2. Message Center (/messages route)**
+- Threaded inbox with all approvals, revisions, declines
+- Unread badge in sim header
+- Full message history per thread
+- Client-side navigation (no reloads)
+- src/components/MessageCenter.tsx + src/lib/comms/messaging.ts
+
+**3. "While You Were Away" Digest**
+- Shows when entering OPERATIONS phase
+- Displays NOI, DSCR, Occupancy with trend indicators (↑ ↓ —)
+- Lists operating events and pending decisions
+- All numbers from deterministic finance engine
+- DigestCard component, dismissible
+- 7 tests passing
+
+**4. Richer Transcripts**
+- 5 scripted multi-turn conversations (2-4 turns each)
+- Shows reasoning and disagreement between personas
+- Expandable "View Team Discussion" on relevant approvals
+- Transcripts for: leverage debate, environmental exception, loan terms, hold/sell timing, tax strategy
+- 15 tests passing
+
+### Verification:
+- ✓ 84 tests passing (npx vitest run)
+- ✓ npm run build successful
+- ✓ All routes working: /, /simulation, /messages, /forecast, /audit
+- ✓ 5 commits (4 features + 1 docs)
+
+### Key Stats:
+- ~1,407 new lines of code
+- 10 new files created
+- 5 existing files updated
+- All comms labeled "Simulated communication"
+- Zero LLM usage (100% deterministic)
+
+M3_COMPLETE.md has been written with full details on how to reach each feature.

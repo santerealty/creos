@@ -1,0 +1,112 @@
+
+> creos@0.1.0 dev
+> next dev
+
+▲ Next.js 16.2.10 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://172.16.0.2:3000
+✓ Ready in 917ms
+Attention: Next.js now collects completely anonymous telemetry regarding usage.
+This information is used to shape Next.js' roadmap and prioritize features.
+You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+https://nextjs.org/telemetry
+
+
+○ Compiling /simulation ...
+ GET /simulation 200 in 15.2s (next.js: 13.8s, application-code: 1401ms)
+ GET / 200 in 3.9s (next.js: 3.5s, application-code: 395ms)
+ GET /simulation 200 in 120ms (next.js: 6ms, application-code: 114ms)
+ GET /forecast 200 in 2.8s (next.js: 2.5s, application-code: 302ms)
+ GET / 200 in 294ms (next.js: 4ms, application-code: 290ms)
+ GET /simulation 200 in 29ms (next.js: 4ms, application-code: 25ms)
+ GET /forecast 200 in 21ms (next.js: 3ms, application-code: 17ms)
+✓ Compiled in 200ms
+✓ Compiled in 525ms
+ GET /forecast 200 in 907ms (next.js: 591ms, application-code: 316ms)
+ GET /forecast 200 in 303ms (next.js: 4ms, application-code: 299ms)
+ GET /forecast 200 in 206ms (next.js: 3ms, application-code: 203ms)
+ GET /forecast 200 in 281ms (next.js: 3ms, application-code: 278ms)
+ GET /forecast 200 in 279ms (next.js: 81ms, application-code: 198ms)
+ GET /forecast 200 in 97ms (next.js: 3ms, application-code: 94ms)
+✓ Compiled in 191ms
+✓ Compiled in 22ms
+ GET / 200 in 73ms (next.js: 10ms, application-code: 64ms)
+ GET / 200 in 77ms (next.js: 2ms, application-code: 75ms)
+ GET /simulation 200 in 178ms (next.js: 6ms, application-code: 173ms)
+ GET /forecast 200 in 205ms (next.js: 87ms, application-code: 118ms)
+ GET /scorecard 200 in 2.6s (next.js: 1978ms, application-code: 598ms)
+ GET /audit 200 in 2.1s (next.js: 1806ms, application-code: 298ms)
+ GET / 200 in 193ms (next.js: 2ms, application-code: 191ms)
+ GET /simulation 200 in 24ms (next.js: 3ms, application-code: 21ms)
+✓ Compiled in 171ms
+✓ Compiled in 298ms
+✓ Compiled in 207ms
+✓ Compiled in 349ms
+ GET /simulation 200 in 796ms (next.js: 405ms, application-code: 391ms)
+ GET /simulation 200 in 203ms (next.js: 2ms, application-code: 201ms)
+✓ Compiled in 406ms
+✓ Compiled in 806ms
+ GET /simulation 200 in 1201ms (next.js: 212ms, application-code: 988ms)
+ GET /simulation 200 in 904ms (next.js: 296ms, application-code: 608ms)
+ GET /simulation 200 in 592ms (next.js: 92ms, application-code: 500ms)
+ GET /simulation 200 in 396ms (next.js: 2ms, application-code: 394ms)
+ GET /simulation 200 in 394ms (next.js: 3ms, application-code: 392ms)
+ GET /simulation 200 in 312ms (next.js: 1980µs, application-code: 310ms)
+ GET /simulation 200 in 403ms (next.js: 1606µs, application-code: 401ms)
+ GET /simulation 200 in 595ms (next.js: 3ms, application-code: 592ms)
+ GET /simulation 200 in 490ms (next.js: 19ms, application-code: 471ms)
+ GET /simulation 200 in 300ms (next.js: 3ms, application-code: 297ms)
+✓ Compiled in 264ms
+✓ Compiled in 302ms
+✓ Compiled in 245ms
+✓ Compiled in 199ms
+✓ Compiled in 394ms
+ GET /simulation 200 in 999ms (next.js: 302ms, application-code: 697ms)
+ GET /simulation 200 in 599ms (next.js: 11ms, application-code: 588ms)
+ GET /simulation 200 in 503ms (next.js: 94ms, application-code: 409ms)
+ GET /simulation 200 in 411ms (next.js: 3ms, application-code: 408ms)
+ GET /simulation 200 in 407ms (next.js: 3ms, application-code: 405ms)
+ GET /simulation 200 in 303ms (next.js: 2ms, application-code: 301ms)
+ GET /simulation 200 in 301ms (next.js: 85ms, application-code: 216ms)
+ GET /simulation 200 in 282ms (next.js: 2ms, application-code: 280ms)
+ GET /simulation 200 in 187ms (next.js: 89ms, application-code: 98ms)
+ GET /simulation 200 in 400ms (next.js: 2ms, application-code: 398ms)
+ GET /simulation 200 in 394ms (next.js: 1806µs, application-code: 392ms)
+ GET /simulation 200 in 309ms (next.js: 85ms, application-code: 224ms)
+ GET /simulation 200 in 308ms (next.js: 1686µs, application-code: 306ms)
+ GET /simulation 200 in 210ms (next.js: 2ms, application-code: 208ms)
+ GET /simulation 200 in 277ms (next.js: 2ms, application-code: 275ms)
+ GET /simulation 200 in 186ms (next.js: 85ms, application-code: 101ms)
+✓ Compiled in 111ms
+✓ Compiled in 109ms
+✓ Compiled in 80ms
+✓ Compiled in 402ms
+✓ Compiled in 105ms
+✓ Compiled in 176ms
+✓ Compiled in 216ms
+ GET /simulation 200 in 692ms (next.js: 289ms, application-code: 403ms)
+ GET /simulation 200 in 202ms (next.js: 92ms, application-code: 110ms)
+✓ Compiled in 255ms
+ GET /simulation 200 in 606ms (next.js: 291ms, application-code: 315ms)
+ GET /simulation 200 in 201ms (next.js: 2ms, application-code: 199ms)
+✓ Compiled in 103ms
+✓ Compiled in 89ms
+✓ Compiled in 253ms
+ GET /simulation 200 in 692ms (next.js: 195ms, application-code: 497ms)
+ GET /simulation 200 in 202ms (next.js: 3ms, application-code: 200ms)
+✓ Compiled in 253ms
+ GET / 200 in 369ms (next.js: 13ms, application-code: 356ms)
+ GET /simulation 200 in 89ms (next.js: 3ms, application-code: 87ms)
+ GET /inbox 404 in 2.6s (next.js: 2.1s, application-code: 509ms)
+ GET /digest 404 in 110ms (next.js: 2ms, application-code: 108ms)
+ GET /forecast 200 in 173ms (next.js: 70ms, application-code: 103ms)
+ GET /scorecard 200 in 129ms (next.js: 13ms, application-code: 115ms)
+ GET /audit 200 in 293ms (next.js: 193ms, application-code: 100ms)
+ GET /messages 200 in 2.4s (next.js: 2.0s, application-code: 390ms)
+ GET / 200 in 32ms (next.js: 2ms, application-code: 30ms)
+ GET / 200 in 338ms (next.js: 34ms, application-code: 305ms)
+ GET /simulation 200 in 99ms (next.js: 3ms, application-code: 97ms)
+ GET /messages 200 in 23ms (next.js: 3ms, application-code: 20ms)
+✓ Compiled in 46ms
+ GET / 200 in 225ms (next.js: 3ms, application-code: 222ms)
+ GET /simulation 200 in 27ms (next.js: 3ms, application-code: 23ms)
