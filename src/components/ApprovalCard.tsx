@@ -110,13 +110,19 @@ export default function ApprovalCard({ approval, onDecide, onRevise }: ApprovalC
           <div className="text-sm font-medium text-gray-700 mb-2">Attachments (SYNTHETIC DATA)</div>
           <div className="space-y-2">
             {approval.attachments.map((att, idx) => (
-              <div key={idx} className="flex items-center gap-2 text-sm text-gray-600 bg-white rounded px-3 py-2 border border-gray-200">
+              <a
+                key={idx}
+                href={att.url ?? `/documents/${att.type}.html`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-sm text-blue-700 bg-white rounded px-3 py-2 border border-gray-200 hover:bg-blue-50 hover:border-blue-300 transition-colors cursor-pointer"
+              >
                 <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M8 4a3 3 0 00-3 3v4a5 5 0 0010 0V7a1 1 0 112 0v4a7 7 0 11-14 0V7a5 5 0 0110 0v4a3 3 0 11-6 0V7a1 1 0 012 0v4a1 1 0 102 0V7a3 3 0 00-3-3z" clipRule="evenodd" />
                 </svg>
-                <span className="flex-1">{att.name}</span>
+                <span className="flex-1 underline">{att.name}</span>
                 <span className="text-xs text-gray-500">{att.type}</span>
-              </div>
+              </a>
             ))}
           </div>
         </div>
