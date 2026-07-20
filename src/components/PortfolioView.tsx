@@ -7,6 +7,18 @@ import { useSimulationStore } from '@/store/simulationStore';
 import { createParkviewSimulation } from '@/data/parkview';
 import { withThousands } from '@/lib/format';
 
+const PROPERTY_IMAGES: Record<string, string> = {
+  Multifamily: '/images/multifamily.svg',
+  Office: '/images/office.svg',
+  Retail: '/images/retail.svg',
+  Industrial: '/images/industrial.svg',
+  'Mixed-Use': '/images/office.svg',
+};
+
+function propertyImage(type: string): string {
+  return PROPERTY_IMAGES[type] ?? '/images/office.svg';
+}
+
 interface PropertyCardProps {
   property: Property;
   onStart: () => void;
@@ -21,6 +33,11 @@ function PropertyCard({ property, onStart }: PropertyCardProps) {
 
   return (
     <div className="bg-white border border-gray-200 rounded-lg p-6 hover:border-emerald-500 transition-colors">
+      <img
+        src={propertyImage(property.propertyType)}
+        alt={`${property.propertyType} property — ${property.name}`}
+        className="-mx-6 -mt-6 mb-4 w-[calc(100%+3rem)] h-32 object-cover rounded-t-lg"
+      />
       <div className="flex items-start justify-between mb-4">
         <div>
           <h3 className="text-lg font-semibold text-gray-900">{property.name}</h3>
@@ -169,6 +186,11 @@ export default function PortfolioView() {
             { name: 'Innovation Logistics Hub', city: 'Dallas', state: 'TX', strategy: 'Opportunistic', units: 0, type: 'Industrial' },
           ].map((prop, idx) => (
             <div key={idx} className="bg-white border border-gray-200 rounded-lg p-6 opacity-60">
+              <img
+                src={propertyImage(prop.type)}
+                alt={`${prop.type} property — ${prop.name}`}
+                className="-mx-6 -mt-6 mb-4 w-[calc(100%+3rem)] h-32 object-cover rounded-t-lg grayscale"
+              />
               <div className="mb-4">
                 <h3 className="text-lg font-semibold text-gray-900">{prop.name}</h3>
                 <p className="text-sm text-gray-600">{prop.city}, {prop.state}</p>

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 220" width="400" height="220" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Class A industrial logistics warehouse">
+  <defs>
+    <linearGradient id="inSky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#c3e2f7"/><stop offset="1" stop-color="#eef7fc"/></linearGradient>
+    <linearGradient id="inWall" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e9edf0"/><stop offset="1" stop-color="#cdd6dc"/></linearGradient>
+    <linearGradient id="inRoof" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#aeb9c1"/><stop offset="1" stop-color="#8b98a1"/></linearGradient>
+  </defs>
+  <rect width="400" height="220" fill="url(#inSky)"/>
+  <rect y="176" width="400" height="44" fill="#8a949c"/>
+  <rect y="196" width="400" height="24" fill="#6f7982"/>
+  <!-- warehouse body -->
+  <rect x="34" y="86" width="332" height="90" fill="url(#inWall)"/>
+  <rect x="34" y="78" width="332" height="12" fill="url(#inRoof)"/>
+  <!-- clerestory windows -->
+  <g fill="#bfe0f5" opacity="0.85"><rect x="46" y="96" width="40" height="14"/><rect x="96" y="96" width="40" height="14"/><rect x="146" y="96" width="40" height="14"/></g>
+  <!-- office glass end -->
+  <rect x="300" y="96" width="60" height="80" fill="#7fb4dd"/>
+  <g fill="none" stroke="#cfeaff" stroke-width="1.5" opacity="0.8"><line x1="320" y1="96" x2="320" y2="176"/><line x1="340" y1="96" x2="340" y2="176"/><line x1="300" y1="120" x2="360" y2="120"/><line x1="300" y1="144" x2="360" y2="144"/></g>
+  <!-- loading docks -->
+  <g fill="#54606a"><rect x="52" y="132" width="36" height="44"/><rect x="98" y="132" width="36" height="44"/><rect x="144" y="132" width="36" height="44"/><rect x="190" y="132" width="36" height="44"/><rect x="236" y="132" width="36" height="44"/></g>
+  <g fill="#3b444c"><rect x="52" y="132" width="36" height="8"/><rect x="98" y="132" width="36" height="8"/><rect x="144" y="132" width="36" height="8"/><rect x="190" y="132" width="36" height="8"/><rect x="236" y="132" width="36" height="8"/></g>
+  <!-- truck -->
+  <g><rect x="150" y="152" width="46" height="24" fill="#c9463b"/><rect x="196" y="158" width="20" height="18" fill="#4b5560"/><circle cx="162" cy="178" r="5" fill="#222"/><circle cx="206" cy="178" r="5" fill="#222"/></g>
+</svg>
