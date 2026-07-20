@@ -118,7 +118,7 @@ export default function PortfolioView() {
       <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-emerald-50 to-blue-50">
         <div className="max-w-md w-full bg-white rounded-xl shadow-xl p-8">
           <div className="text-center mb-8">
-            <h1 className="text-3xl font-bold text-gray-900 mb-2">CREOS</h1>
+            <h1 className="text-3xl font-bold text-gray-900 mb-2">CREOS SIM</h1>
             <p className="text-gray-600">AI-Native Commercial Real Estate Investment Simulation</p>
           </div>
 
@@ -181,7 +181,7 @@ export default function PortfolioView() {
 
           {/* Placeholder properties */}
           {[
-            { name: 'Meridian Office Plaza', city: 'Austin', state: 'TX', strategy: 'Core+', units: 0, type: 'Office' },
+            { name: 'Baseline Office Complex', city: 'Austin', state: 'TX', strategy: 'Core+', units: 0, type: 'Office' },
             { name: 'Westgate Retail Center', city: 'Denver', state: 'CO', strategy: 'Value-Add', units: 0, type: 'Retail' },
             { name: 'Innovation Logistics Hub', city: 'Dallas', state: 'TX', strategy: 'Opportunistic', units: 0, type: 'Industrial' },
           ].map((prop, idx) => (
@@ -210,7 +210,7 @@ export default function PortfolioView() {
 
         {/* Info Banner */}
         <div className="mt-8 bg-blue-50 border border-blue-200 rounded-lg p-6">
-          <h3 className="font-semibold text-blue-900 mb-2">About CREOS</h3>
+          <h3 className="font-semibold text-blue-900 mb-2">About CREOS SIM</h3>
           <p className="text-blue-800 text-sm">
             CREOS simulates the complete lifecycle of a commercial real estate investment — from data review 
             through underwriting, due diligence, financing, operations, disposition, and final distribution. 

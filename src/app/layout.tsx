@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "CREOS — AI-Native CRE Investment Simulation",
+  title: "CREOS SIM — AI-Native CRE Investment Simulation",
   description: "Experience the complete lifecycle of a commercial real estate investment with AI-native workflow orchestration",
 };
 
