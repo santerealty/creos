@@ -24,6 +24,26 @@ export default function ApprovalQueue() {
     }
   }, [simulation?.currentPhase]);
 
+  // Auto-focus each new decision. Pending approvals render at the top of the
+  // card list (directly under the phase + progress header), so when the active
+  // decision changes we smoothly scroll to the top of the page. This means the
+  // user is looking straight at each new component instead of having to hunt
+  // for it by scrolling up or down.
+  // Signature of the current pending set. This changes on ANY meaningful
+  // transition: advancing to a new phase, deciding any card (even a non-first
+  // one, which shrinks the list), or a decline/revise that re-pends a new card.
+  // Keying the scroll on the full signature (not just the first id) ensures the
+  // user is always brought to the top pending card after every decision.
+  const pendingSignature = (simulation?.pendingApprovals ?? [])
+    .map((a) => a.id)
+    .join('|');
+  useEffect(() => {
+    if (typeof window === 'undefined' || !pendingSignature) return;
+    requestAnimationFrame(() => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }, [pendingSignature]);
+
   if (!simulation) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-gray-50">

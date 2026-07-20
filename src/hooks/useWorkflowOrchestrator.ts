@@ -35,31 +35,40 @@ export function useWorkflowOrchestrator() {
       return;
     }
 
-    // If no pending approvals for current phase, generate them
     const phaseApprovals = live.approvals.filter(
       (a) => a.phase === live.currentPhase
     );
 
+    // Generate this phase's approvals if they haven't been created yet.
     if (phaseApprovals.length === 0) {
       const newApprovals = generatePhaseApprovals(live);
-      newApprovals.forEach((approval) => {
-        addApproval(approval);
-      });
+      if (newApprovals.length > 0) {
+        newApprovals.forEach((approval) => {
+          addApproval(approval);
+        });
+        // Wait for the store update to flush before evaluating advancement.
+        return;
+      }
+      // No approvals to generate → this is a pure transition phase
+      // (e.g. ACQUISITION_CLOSE, SALE_CLOSE, DISSOLUTION). Fall through so it
+      // auto-advances instead of hanging on "Phase complete".
     }
 
-    // Check if we should auto-advance to next phase
+    // Auto-advance to the next phase once no approvals remain pending.
+    // NOTE: we intentionally do NOT require phaseApprovals.length > 0 here, so
+    // that approval-less transition phases still advance rather than getting
+    // stuck forever.
     if (
       live.pendingApprovals.length === 0 &&
-      phaseApprovals.length > 0 &&
       canAdvancePhase(live) &&
       shouldAutoAdvance(live.currentPhase)
     ) {
       const nextPhase = getNextPhase(live.currentPhase);
       if (nextPhase) {
-        // Small delay before advancing for UX
+        // Small delay before advancing for UX.
         const timer = setTimeout(() => {
           setPhase(nextPhase);
-        }, 1500);
+        }, 1200);
         return () => clearTimeout(timer);
       }
     }
