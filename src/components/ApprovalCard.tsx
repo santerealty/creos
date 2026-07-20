@@ -5,6 +5,7 @@ import { Approval } from '@/types';
 import { REVISION_REASONS } from '@/lib/workflow/approvals';
 import { getPersonaForApproval, getPersonaById } from '@/lib/comms/personas';
 import { getTranscriptForApproval } from '@/lib/comms/transcripts';
+import { withThousands } from '@/lib/format';
 
 interface ApprovalCardProps {
   approval: Approval;
@@ -50,7 +51,7 @@ export default function ApprovalCard({ approval, onDecide, onRevise }: ApprovalC
       </div>
 
       {/* Description */}
-      <p className="text-sm text-gray-700 mb-4">{approval.description}</p>
+      <p className="text-sm text-gray-700 mb-4">{withThousands(approval.description)}</p>
 
       {/* Agent Message (Simulated AI Communication) */}
       <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-4">
@@ -67,7 +68,7 @@ export default function ApprovalCard({ approval, onDecide, onRevise }: ApprovalC
             <div className="text-xs text-blue-600 font-medium mb-2">
               Simulated communication
             </div>
-            <div className="text-sm text-gray-800 whitespace-pre-line">{approval.agentMessage}</div>
+            <div className="text-sm text-gray-800 whitespace-pre-line">{withThousands(approval.agentMessage)}</div>
           </div>
         </div>
       </div>
@@ -79,7 +80,7 @@ export default function ApprovalCard({ approval, onDecide, onRevise }: ApprovalC
             <div key={idx} className="bg-white rounded-lg p-3 border border-gray-200">
               <div className="text-xs text-gray-500 mb-1">{metric.label}</div>
               <div className="text-lg font-semibold text-gray-900 flex items-center gap-2">
-                {metric.value}
+                {withThousands(metric.value)}
                 {metric.trend === 'up' && <span className="text-green-600 text-sm">↑</span>}
                 {metric.trend === 'down' && <span className="text-red-600 text-sm">↓</span>}
               </div>
@@ -168,7 +169,7 @@ export default function ApprovalCard({ approval, onDecide, onRevise }: ApprovalC
                         <div className="text-xs font-semibold text-gray-900 mb-1">
                           {turnPersona.name} <span className="text-gray-500 font-normal">({turnPersona.role})</span>
                         </div>
-                        <div className="text-sm text-gray-700">{turn.message}</div>
+                        <div className="text-sm text-gray-700">{withThousands(turn.message)}</div>
                       </div>
                     </div>
                   );

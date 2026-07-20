@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { useSimulationStore } from '@/store/simulationStore';
 import { MessageThread } from '@/types';
 import { getPersonaById } from '@/lib/comms/personas';
+import { withThousands } from '@/lib/format';
 
 export default function MessageCenter() {
   const { simulation, markThreadRead } = useSimulationStore();
@@ -136,7 +137,7 @@ export default function MessageCenter() {
                         <div className="text-xs text-blue-600 font-medium mb-2">
                           Simulated communication
                         </div>
-                        <div className="text-sm text-gray-800 whitespace-pre-line">{message.content}</div>
+                        <div className="text-sm text-gray-800 whitespace-pre-line">{withThousands(message.content)}</div>
                         <div className="text-xs text-gray-400 mt-2">
                           {new Date(message.timestamp).toLocaleString()}
                         </div>

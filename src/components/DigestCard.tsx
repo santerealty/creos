@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { OperationsDigest } from '@/lib/comms/digest';
 import { PERSONAS } from '@/lib/comms/personas';
+import { withThousands } from '@/lib/format';
 
 interface DigestCardProps {
   digest: OperationsDigest;
@@ -46,7 +47,7 @@ export default function DigestCard({ digest, onDismiss }: DigestCardProps) {
       </div>
 
       {/* Summary */}
-      <p className="text-sm text-gray-800 mb-4">{digest.summary}</p>
+      <p className="text-sm text-gray-800 mb-4">{withThousands(digest.summary)}</p>
 
       {/* Key Metrics */}
       {digest.metricChanges.length > 0 && (
@@ -57,7 +58,7 @@ export default function DigestCard({ digest, onDismiss }: DigestCardProps) {
               <div key={idx} className="bg-white rounded-lg p-3 border border-gray-200">
                 <div className="text-xs text-gray-500 mb-1">{metric.title}</div>
                 <div className="flex items-center gap-2">
-                  <div className="text-lg font-semibold text-gray-900">{metric.value}</div>
+                  <div className="text-lg font-semibold text-gray-900">{withThousands(metric.value)}</div>
                   {metric.impact === 'positive' && <span className="text-green-600 text-sm">↑</span>}
                   {metric.impact === 'negative' && <span className="text-red-600 text-sm">↓</span>}
                 </div>

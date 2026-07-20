@@ -5,6 +5,7 @@ import { Property } from '@/types';
 import { useRouter } from 'next/navigation';
 import { useSimulationStore } from '@/store/simulationStore';
 import { createParkviewSimulation } from '@/data/parkview';
+import { withThousands } from '@/lib/format';
 
 interface PropertyCardProps {
   property: Property;
@@ -56,9 +57,9 @@ function PropertyCard({ property, onStart }: PropertyCardProps) {
       <div className="mb-4">
         <div className="text-xs text-gray-500 mb-2">Rent Upside</div>
         <div className="flex items-center gap-2">
-          <span className="text-sm text-gray-700">${property.avgRentPerUnit}/mo</span>
+          <span className="text-sm text-gray-700">{withThousands(`$${property.avgRentPerUnit}`)}/mo</span>
           <span className="text-gray-400">→</span>
-          <span className="text-sm font-semibold text-emerald-600">${property.marketRentPerUnit}/mo</span>
+          <span className="text-sm font-semibold text-emerald-600">{withThousands(`$${property.marketRentPerUnit}`)}/mo</span>
           <span className="text-xs text-emerald-600 bg-emerald-50 px-2 py-1 rounded">
             +{(((property.marketRentPerUnit - property.avgRentPerUnit) / property.avgRentPerUnit) * 100).toFixed(0)}%
           </span>

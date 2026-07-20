@@ -2,6 +2,7 @@
 
 import { useSimulationStore } from '@/store/simulationStore';
 import { useRouter } from 'next/navigation';
+import { withThousands } from '@/lib/format';
 
 export default function AuditTrail() {
   const { simulation } = useSimulationStore();
@@ -83,7 +84,7 @@ export default function AuditTrail() {
                       {getEventIcon(event.type)}
                     </div>
                     <div className="flex-1 min-w-0">
-                      <div className="text-gray-900">{event.description}</div>
+                      <div className="text-gray-900">{withThousands(event.description)}</div>
                       {event.data && (
                         <details className="mt-1">
                           <summary className="text-xs text-gray-500 cursor-pointer hover:text-gray-700">
