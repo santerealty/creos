@@ -19,6 +19,12 @@
   }
 }
 
+html {
+  /* Global UI scale: shrinks fonts, padding and gaps together (Tailwind v4
+     sizes both text and spacing in rem) for a denser, more standard UI. */
+  font-size: 81.25%; /* 13px base */
+}
+
 body {
   background: var(--background);
   color: var(--foreground);

@@ -46,7 +46,7 @@ export default function DigestCard({ digest, onDismiss }: DigestCardProps) {
       </div>
 
       {/* Summary */}
-      <p className="text-gray-800 mb-4">{digest.summary}</p>
+      <p className="text-sm text-gray-800 mb-4">{digest.summary}</p>
 
       {/* Key Metrics */}
       {digest.metricChanges.length > 0 && (
